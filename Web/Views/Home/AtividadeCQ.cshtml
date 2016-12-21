@@ -1,0 +1,21 @@
+﻿@model Domain.Entidades.AtividadeCtrlQualidade
+@{
+    ViewBag.Title = "AtividadeCQ";
+}
+
+<h2>Detalhes atividade</h2>
+
+<p>
+    <label>Local: </label>
+    @Model.Local.Sigla
+</p>
+
+<p>
+    <label>Período: </label>
+    @Model.PeriodoRealizacao.Inicio.ToShortDateString() a @Model.PeriodoRealizacao.Termino.ToShortDateString()
+</p>
+
+<p>
+    <label>Situação</label>
+    @Model.Estado
+</p>

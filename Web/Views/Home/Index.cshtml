@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form action="@Url.Action("Agendar","Home")" method="post">
+    <input type="submit" value="Agendar ACQ" />
+</form>
+
+@if (TempData["MSG_STATUS"] != null)
+{ 
+    
+    <p>
+        <label>Status última operação:</label>
+        @TempData["MSG_STATUS"] 
+    </p>
+}
